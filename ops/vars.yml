@@ -1,9 +1,9 @@
 ---
 
-app_name: flask_skeleton
-repo_url: https://github.com/nickhs/flask_skeleton
-database_password: this_is_not_secure
-secret_key: this_is_not_secure
+app_name: vowel
+repo_url: https://github.com/nickhs/vowel
+database_password: titties
+secret_key: titties
 
 repo_remote: origin
 repo_version: master

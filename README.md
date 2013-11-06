@@ -5,7 +5,15 @@ Hipster shit is hipster.
 
 TODO
 ------
-- Stuff
+
+- parse articles and display them with good typography
+- send those articles to specific users (multiple)
+- have a unified inbox of articles people sent you
+
+- Future
+- send articles to a mobile app that'd cache them offline
+- track how many times an article was shared
+- have a front page showing the most popular articles
 
 What is this?
 -------------
