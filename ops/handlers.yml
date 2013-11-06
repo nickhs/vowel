@@ -1,0 +1,16 @@
+---
+
+- name: source env variables
+  raw: . /etc/profile
+
+- name: restart nginx
+  action: service name=nginx state=restarted
+
+- name: restart app
+  action: supervisorctl name=${app_name} state=restarted
+
+- name: restart postgresql
+  action: service name=postgresql state=restarted
+
+- name: build database
+  raw: source /etc/profile && PYTHONPATH=${webapps_dir}/${app_name} python ${webapps_dir}/${app_name}/createdb.py
