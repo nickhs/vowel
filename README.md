@@ -46,7 +46,7 @@ Get a development environment running:
 
 	$ vagrant up web
 	$ vagrant ssh
-	$ cd /srv/flask_skeleton && python main.py
+	$ cd /srv/vowel && python main.py
 	Open http://192.168.100.10
 
 Put it in production:
@@ -63,8 +63,8 @@ Instructions
 
 First, you'll need to clone the repo.
 
-    $ git clone https://github.com/nickhs/flask_skeleton.git
-    $ cd flask_skeleton
+    $ git clone https://github.com/nickhs/vowel.git
+    $ cd vowel
 
 Then you'll need to downloand and install [Vagrant](http://www.vagrantup.com/)
 if you don't have it already. You'll also need [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
@@ -86,7 +86,7 @@ Finally let Vagrant do the rest. Don't worry if it seems noisy:
 	$ vagrant up db
 	$ vagrant up web
 	$ vagrant ssh web
-	$ cd /srv/flask_skeleton
+	$ cd /srv/vowel
 	$ python main.py
 
 Visit the site at [192.168.100.10](http://192.168.100.10).
