@@ -4,7 +4,7 @@
   action: command /usr/bin/apt-get update
 
 - name: install base packages
-  action: apt pkg=$item state=installed
+  action: apt pkg=$item state=installed update_cache=yes
   with_items:
     - libpq-dev
     - python-dev

@@ -3,6 +3,7 @@
 # ----------------------
 flask
 flask-sqlalchemy
+blinker
 
 # ----------------------
 # Testing
@@ -14,3 +15,9 @@ mock
 # Production Server
 # ----------------------
 gunicorn
+
+#----------------------
+# Vowel Dependencies
+#----------------------
+flask-security
+flask-debugtoolbar

@@ -33,5 +33,10 @@ pip-log.txt
 *.py[co]
 *.rbc
 
+# Devops files
 .vagrant
 ops/hosts
+
+# Secret files
+config/production.py
+config/development.py
