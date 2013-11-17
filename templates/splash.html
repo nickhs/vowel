@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 
-{% block js %}
+{% block css %}
+    <link href="/static/css/splash.css" rel="stylesheet">
 {% endblock %}
 
 
 {% block main %}
-Splash page goes here
-<a href="/login">Login</a>
-<a href="/register">Register</a>
+    <div role="banner" id="logo">Vowel.io</div>
+    <hr class="large">
+    <div class="links">
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+    </div>
 {% endblock %}

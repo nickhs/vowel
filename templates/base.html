@@ -12,9 +12,11 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<link rel="stylesheet" href="/static/css/base.css">
+	<link rel="stylesheet" href="/static/css/skeleton-base.css">
 	<link rel="stylesheet" href="/static/css/skeleton.css">
 	<link rel="stylesheet" href="/static/css/layout.css">
+
+	<link rel="stylesheet" href="/static/css/base.css">
 
     {% block css %}{% endblock %}
 
@@ -31,7 +33,7 @@
             {% include "header.html" %}
         </header>
 
-        <div id="main" role="main">
+        <div class="sixteen columns" id="main" role="main">
             {% block main %}{% endblock %}
         </div>
 
