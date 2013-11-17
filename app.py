@@ -15,7 +15,13 @@ app = Flask(__name__)
 
 app.config.from_object('config.base')
 
-app.config.from_object('config.production')
+deploy_type = os.environ.get('VOWEL_DEPLOY', 'development')
+
+if deploy_type in ['dev', 'development']:
+    app.config.from_object('config.development')
+
+elif deploy_type in ['prod', 'production']:
+    app.config.from_object('config.production')
 
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'this_should_be_configured')
 app.config['PORT'] = int(os.environ.get('PORT', 8000))
