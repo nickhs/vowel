@@ -20,4 +20,10 @@ gunicorn
 # Vowel Dependencies
 #----------------------
 flask-security
+requests
+
+#---------------------
+# Dev Depedencies
+#---------------------
+bpython
 flask-debugtoolbar

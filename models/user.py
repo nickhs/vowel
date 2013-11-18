@@ -27,11 +27,21 @@ class User(UserMixin, ModelMixin, db.Model):
     roles = db.relationship('Role', secondary=roles_users,
                             backref=db.backref('users', lazy='dynamic'))
 
-    def __init__(self, email, password, active=False, roles=[]):
+    originating_shares = db.relationship('Share', backref='originator',
+            lazy='dynamic', foreign_keys='Share.originator_id')
+
+    receiving_shares = db.relationship('Share', backref='receiver',
+            lazy='dynamic', foreign_keys='Share.receiver_id')
+
+    def __init__(self, email, password=None, active=False, roles=[]):
+        super(User, self).__init__()
         self.email = email
         self.password = password
         self.active = active
         self.roles += roles
+
+    def get_name(self):
+        return self.email
 
 
 class Role(RoleMixin, ModelMixin, db.Model):

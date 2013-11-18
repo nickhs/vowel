@@ -16,3 +16,6 @@ MAIL_PASSWORD = 'fixme'
 
 # Flask Debug Toolbar
 DEBUG_TB_INTERCEPT_REDIRECTS = False
+
+# Article Parsing
+ARTICLE_PARSE_ENDPOINT = "http://api.diffbot.com/v2/article"
