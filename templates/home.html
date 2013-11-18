@@ -3,9 +3,35 @@
 {% block js %}
 {% endblock %}
 
+{% block css %}
+    <link href="/static/css/home.css" rel="stylesheet">
+{% endblock %}
 
+{% from "_form_helpers.html" import render_field %}
 {% block main %}
-<div class="row-fluid">
-    YES!
-</div>
+    <div class="row header">
+        <div class="two columns logo text-center">Vowel</div>
+
+        <div class="eleven columns text-center top-links">
+            <span class="active" id="inbox">Inbox</span>
+            <span id="sent">Sent</span>
+        </div>
+
+        <div class="two columns username text-center">{{ user.public_name }}</div>
+    </div>
+
+    <div class="row sixteen columns link-submit">
+        <form class="link text-center" method="POST" action={{ url_for('home') }}>
+            {{ form.hidden_tag() }}
+            {{ render_field(form.url) }}
+            {{ render_field(form.friend) }}
+            <input type="submit" name="submit" value="Submit" />
+        </form>
+        <hr>
+        <div class="help-text text-center">
+            Send an article to a friend.
+        </div>
+    </div>
+
+    <div class="row list-links"></div>
 {% endblock %}

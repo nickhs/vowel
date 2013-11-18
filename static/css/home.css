@@ -1,0 +1,22 @@
+.header {
+    line-height: 50px;
+    font-size: 25px;
+}
+
+.link input[type=text] {
+    background: transparent;
+}
+
+.link .help-text {
+    z-index: 2;
+    position: relative;
+}
+
+.link label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.link input {
+    display: inline-block;
+}

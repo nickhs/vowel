@@ -13,3 +13,6 @@ MAIL_USE_TLS = True
 MAIL_USE_SSL = False
 MAIL_USERNAME = 'fixme@fixme.com'
 MAIL_PASSWORD = 'fixme'
+
+# Flask Debug Toolbar
+DEBUG_TB_INTERCEPT_REDIRECTS = False
