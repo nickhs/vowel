@@ -1,4 +1,6 @@
 ---
+- name: add faster repos
+  action: template src=templates/faster_repos.txt dest=/etc/apt/sources.list
 
 - name: update apt
   action: command /usr/bin/apt-get update
@@ -9,9 +11,10 @@
     - libpq-dev
     - python-dev
     - python-setuptools
-    - git
+    - git-core
     - libevent-dev
     - python-psycopg2
+    - vim
 
 - name: install pip
   action: easy_install name=pip
