@@ -79,6 +79,9 @@ class User(ModelMixin, db.Model):
     def is_authenticated(self):
         return True
 
+    def is_anonymous(self):
+        return False
+
 
 class Role(ModelMixin, db.Model):
     __tablename__ = 'role'
