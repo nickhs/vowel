@@ -1,5 +1,5 @@
 #!/bin/sh
-
+exit 0
 str="ansible-playbook ops/deploy.yml -i ops/hosts"
 
 if [[ $1 = "--fast" ]]; then

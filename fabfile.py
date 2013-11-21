@@ -11,4 +11,9 @@ def deploy():
 
     with cd("/srv/vowel"):
         run("git pull")
+
+def full_deploy():
+    deploy()
+
+    with cd("/srv/vowel"):
         run("pip install -r requirements.txt")
