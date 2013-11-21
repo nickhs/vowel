@@ -25,6 +25,7 @@ itsdangerous
 passlib
 flask-login
 flask-wtf
+wtforms
 
 #---------------------
 # Dev Depedencies
