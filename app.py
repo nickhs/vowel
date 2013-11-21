@@ -7,9 +7,9 @@ Werkzeug Documentation:  http://werkzeug.pocoo.org/documentation/
 import os
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
-from flask.ext.security import Security, SQLAlchemyUserDatastore
 from flask.ext.mail import Mail
 from flask.ext.debugtoolbar import DebugToolbarExtension
+from flask.ext.login import LoginManager
 
 app = Flask(__name__)
 
@@ -36,10 +36,7 @@ config = app.config
 
 mail = Mail(app)
 
-from models import User, Role
-
-user_datastore = SQLAlchemyUserDatastore(db, User, Role)
-security = Security(app, user_datastore)
-
 toolbar = DebugToolbarExtension(app)
 _pyflakes = toolbar
+
+login_manager = LoginManager(app)

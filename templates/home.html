@@ -33,5 +33,16 @@
         </div>
     </div>
 
-    <div class="row list-links"></div>
+    <div class="row list-links">
+        {% for share in shares %}
+        <div class="article">
+            <h1>{{ share.article.title }}</h1>
+            <p>{{ share.article.text[:252] }}...</p>
+            <div class="row">
+                Sent by <span class="sent-by">{{ share.originator.get_name() }}</span>
+                via <span class="website">{{ share.article.get_domain() }}</span>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
 {% endblock %}

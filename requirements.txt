@@ -19,8 +19,11 @@ gunicorn
 #----------------------
 # Vowel Dependencies
 #----------------------
-flask-security
 requests
+flask-mail
+itsdangerous
+passlib
+flask-login
 
 #---------------------
 # Dev Depedencies

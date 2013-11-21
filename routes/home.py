@@ -40,7 +40,9 @@ def home():
         flash("Successfully shared to %s" % user.get_name(), 'success')
         parse_article(article, share)
 
-    received = current_user.receiving_shares.filter(Share.parsed == True).order_by(Share.created_date).limit(10)
-    [app.logger.debug(r) for r in received]
+    received = current_user.receiving_shares.filter(Share.parsed == True) \
+            .filter(Share.read_date == None) \
+            .order_by(Share.created_date) \
+            .limit(10).all()
 
-    return render_template('home.html', user=current_user, form=form)
+    return render_template('home.html', user=current_user, form=form, shares=received)

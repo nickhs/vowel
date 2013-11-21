@@ -1,8 +1,12 @@
 from site import about, send_text_file
 from home import home
+from user import login, logout, register
 
 __all__ = [
     'home',
     'about',
-    'send_text_file'
+    'send_text_file',
+    'login',
+    'logout',
+    'register'
 ]

@@ -1,4 +1,5 @@
 from datetime import datetime
+from urlparse import urlparse
 
 from app import db
 
@@ -32,3 +33,6 @@ class Article(ModelMixin, db.Model):
             return True
 
         return False
+
+    def get_domain(self):
+        return urlparse(self.url).netloc

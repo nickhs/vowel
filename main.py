@@ -1,7 +1,8 @@
 from flask import render_template
 
-from app import app, config
+from app import app, config, login_manager
 from routes import __all__
+from models import User
 
 _pyflakes = __all__  # to pass pyflakes
 
@@ -19,6 +20,11 @@ def add_header(response):
 def page_not_found(error):
     """Custom 404 page."""
     return render_template('404.html'), 404
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(user_id)
 
 
 if __name__ == '__main__':
