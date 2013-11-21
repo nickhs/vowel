@@ -31,3 +31,4 @@ flask-wtf
 #---------------------
 bpython
 flask-debugtoolbar
+fabric
