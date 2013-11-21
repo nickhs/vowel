@@ -26,7 +26,6 @@ passlib
 flask-login
 flask-wtf
 wtforms
-blinker
 raven
 
 #---------------------
