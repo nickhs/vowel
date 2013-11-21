@@ -20,6 +20,9 @@ deploy_type = os.environ.get('VOWEL_DEPLOY', 'development')
 if deploy_type in ['dev', 'development']:
     app.config.from_object('config.development')
 
+if deploy_type in ['stag', 'staging']:
+    app.config.from_object('config.staging')
+
 elif deploy_type in ['prod', 'production']:
     app.config.from_object('config.production')
 
