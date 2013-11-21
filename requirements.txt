@@ -24,6 +24,7 @@ flask-mail
 itsdangerous
 passlib
 flask-login
+flask-wtf
 
 #---------------------
 # Dev Depedencies
