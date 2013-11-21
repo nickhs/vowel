@@ -1,9 +1,14 @@
+from datetime import datetime
+
 from app import config, app
 
 import requests
 
 
 def parse_article(article, share):
+    if article.is_parsed():
+        return notify_new_article(article, share)
+
     endpoint = config['ARTICLE_PARSE_ENDPOINT']
 
     payload = {
@@ -25,8 +30,11 @@ def parse_article(article, share):
     article.text = json['text']
     article.date = json['date']
     article.author = json.get('author', '')
+    article.parse_date = datetime.utcnow()
+    share.parsed = True
 
     article.save()
+    share.save()
 
     notify_new_article(article, share)
 

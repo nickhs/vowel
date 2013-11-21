@@ -40,6 +40,7 @@ def home():
         flash("Successfully shared to %s" % user.get_name(), 'success')
         parse_article(article, share)
 
-    import pdb; pdb.set_trace()
+    received = current_user.receiving_shares.filter(Share.parsed == True).order_by(Share.created_date).limit(10)
+    [app.logger.debug(r) for r in received]
 
     return render_template('home.html', user=current_user, form=form)

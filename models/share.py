@@ -12,6 +12,7 @@ class Share(ModelMixin, db.Model):
     receiver_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     article_id = db.Column(db.Integer, db.ForeignKey('article.id'))
     read_date = db.Column(db.DateTime)
+    parsed = db.Column(db.Boolean, default=False)
 
     def __init__(self, origin, receiver, article):
         super(Share, self).__init__()
