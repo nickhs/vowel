@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block js %}
+    <script type="text/javascript" src="/static/js/index.js"></script>
 {% endblock %}
 
 {% block css %}
@@ -23,11 +24,11 @@
     <div class="row sixteen columns link-submit">
         <form class="link text-center" method="POST" action={{ url_for('home') }}>
             {{ form.hidden_tag() }}
-            {{ render_field(form.url) }}
-            {{ render_field(form.friend) }}
-            <input type="submit" name="submit" value="Submit" />
+            {{ render_field(form.url, "submit-link") }}
+            {{ render_field(form.friend, "js-hide") }}
+            <input class="js-hide" type="submit" name="submit" value="Submit" />
         </form>
-        <hr>
+        <hr class="js-hide">
         <div class="help-text text-center">
             Send an article to a friend.
         </div>

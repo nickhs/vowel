@@ -29,4 +29,4 @@ def load_user(user_id):
 
 if __name__ == '__main__':
     app.run(port=config.get('PORT', 8000),
-            debug=config.get('DEBUG', False))
+            debug=config.get('DEBUG', False), host="0.0.0.0")

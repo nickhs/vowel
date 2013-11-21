@@ -20,3 +20,58 @@
 .link input {
     display: inline-block;
 }
+
+.link-submit {
+    margin-bottom: 50px;
+}
+
+.link-submit.js #url {
+    border: none;
+    border-bottom: 3px solid #ddd;
+    font-size: 24px;
+    width: 300px;
+    margin-bottom: 0;
+}
+
+.js .submit-link {
+    height: 50px;
+}
+
+.link-submit.js #url::before {
+    content: 'Paste URL';
+    text-align: center;
+    font-size: 24px;
+    background: red;
+}
+
+.link-submit.js #url:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.link-submit.js .js-hide, .link-submit.js label {
+    display: none;
+}
+
+.link-submit.js p, .link-submit.js form {
+    margin-bottom: 0;
+}
+
+.link-submit .paste-url {
+    position: relative;
+    top: -34px;
+    font-size: 24px;
+    font-style: italic;
+    height: 0px; /* hack to make hover area nothing */
+    display: inline-block;
+}
+
+.link-submit .submit-link {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.input-status {
+    display: inline-block;
+    font-size: 24px;
+}

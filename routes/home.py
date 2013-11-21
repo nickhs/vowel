@@ -42,7 +42,7 @@ def home():
 
     received = current_user.receiving_shares.filter(Share.parsed == True) \
             .filter(Share.read_date == None) \
-            .order_by(Share.created_date) \
+            .order_by(Share.created_date.desc()) \
             .limit(10).all()
 
     return render_template('home.html', user=current_user, form=form, shares=received)

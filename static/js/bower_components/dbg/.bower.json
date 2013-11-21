@@ -1,0 +1,14 @@
+{
+  "name": "dbg",
+  "homepage": "https://github.com/amadeus/dbg",
+  "_release": "4a2fcd718b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "4a2fcd718bde63509c6fe3c581c0fdc9c4f50425"
+  },
+  "_source": "git://github.com/amadeus/dbg.git",
+  "_target": "*",
+  "_originalSource": "amadeus/dbg",
+  "_direct": true
+}
