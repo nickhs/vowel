@@ -17,3 +17,4 @@ def full_deploy():
 
     with cd("/srv/vowel"):
         run("pip install -r requirements.txt")
+        run("supervisorctl restart vowel")
