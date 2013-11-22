@@ -36,7 +36,10 @@ class User(ModelMixin, db.Model):
     def __init__(self, email, password=None, active=False, roles=[]):
         super(User, self).__init__()
         self.email = email
-        self.set_password(password, False)
+
+        if password:
+            self.set_password(password, False)
+
         self.active = active
         self.roles += roles
 

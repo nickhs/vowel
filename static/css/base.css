@@ -32,3 +32,25 @@ hr.large {
 .processing {
     opacity: 0.1;
 }
+
+.vowel-loading {
+    background: black;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+    border-radius: 1000px;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    opacity: 1 !important;
+}
+
+.vowel-loading-small {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+}

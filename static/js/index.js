@@ -62,6 +62,8 @@ var SubmitLink = Backbone.View.extend({
         } else {
             this.form.data.friend = value;
             this.$el.addClass('processing');
+            this.loading = new Vowel.Loading(this.$el.find('form'));
+            this.loading.render();
 
             $.ajax({
                 type: this.form.method,
@@ -94,6 +96,7 @@ var SubmitLink = Backbone.View.extend({
 
     requestCleanup: function() {
         this.$el.removeClass('processing');
+        this.loading.remove();
         this.handleCancelClick();
     }
 
