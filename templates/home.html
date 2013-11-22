@@ -10,7 +10,7 @@
 
 {% from "_form_helpers.html" import render_field %}
 {% block main %}
-    <div class="row header">
+    <div class="row sixteen columns header">
         <div class="two columns logo text-center">Vowel</div>
 
         <div class="eleven columns text-center top-links">
@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <div class="row list-links">
+    <div class="row sixteen columns list-links">
         {% for share in shares %}
         <div class="article">
             <a href="/article/{{ share.article.id }}"><h1>{{ share.article.title }}</h1></a>
