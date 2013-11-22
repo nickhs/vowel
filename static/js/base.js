@@ -17,11 +17,12 @@ window.Vowel.Loading = Backbone.View.extend({
     startAnimation: function() {
         if (this.animation) return;
 
+        this.$el.toggleClass('vowel-loading-small');
+
         this.animation = setInterval(function() {
             this.$el.toggleClass('vowel-loading-small');
         }.bind(this), 1000);
 
-        this.$el.toggleClass('vowel-loading-small');
     },
 
     stopAnimation: function() {
