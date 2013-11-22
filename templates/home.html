@@ -24,7 +24,9 @@
     <div class="row sixteen columns link-submit">
         <form class="link text-center" method="POST" action={{ url_for('home') }}>
             {{ form.hidden_tag() }}
-            {{ render_field(form.url, "submit-link") }}
+            <div class="url-wrapper">
+                <input autocomplete="off" type="text" id="url" name="url" placeholder="Paste URL" />
+            </div>
             {{ render_field(form.friend, "js-hide") }}
             <input class="js-hide" type="submit" name="submit" value="Submit" />
         </form>
@@ -37,7 +39,7 @@
     <div class="row list-links">
         {% for share in shares %}
         <div class="article">
-            <h1>{{ share.article.title }}</h1>
+            <a href="/article/{{ share.article.id }}"><h1>{{ share.article.title }}</h1></a>
             <p>{{ share.article.text[:252] }}...</p>
             <div class="row">
                 Sent by <span class="sent-by">{{ share.originator.get_name() }}</span>

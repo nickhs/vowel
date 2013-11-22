@@ -7,9 +7,8 @@
     background: transparent;
 }
 
-.link .help-text {
-    z-index: 2;
-    position: relative;
+.link-submit.js .help-text {
+    margin-top: 10px;
 }
 
 .link label {
@@ -25,28 +24,41 @@
     margin-bottom: 50px;
 }
 
+.link-submit.js .url-wrapper {
+    border-bottom: 2px solid #b0b0b0;
+    min-width: 200px;
+    width: 50%;
+    margin: 0 auto;
+}
+
 .link-submit.js #url {
     border: none;
-    border-bottom: 3px solid #ddd;
     font-size: 24px;
-    width: 300px;
     margin-bottom: 0;
-}
-
-.js .submit-link {
-    height: 50px;
-}
-
-.link-submit.js #url::before {
-    content: 'Paste URL';
     text-align: center;
-    font-size: 24px;
-    background: red;
+    font-style: italic;
+    width: 80%;
 }
 
 .link-submit.js #url:focus {
     outline: none;
     box-shadow: none;
+}
+
+
+.link-submit.js .input-status {
+    content: '➡';
+    font-size: 32px;
+    color: #b0b0b0;
+    background: rgba(255, 255, 255, 1);
+    padding: 0 5px;
+    display: inline-block;
+    line-height: 40px;
+}
+
+.link-submit.js .input-status:hover {
+    color: black;
+    cursor: pointer;
 }
 
 .link-submit.js .js-hide, .link-submit.js label {
@@ -55,23 +67,4 @@
 
 .link-submit.js p, .link-submit.js form {
     margin-bottom: 0;
-}
-
-.link-submit .paste-url {
-    position: relative;
-    top: -34px;
-    font-size: 24px;
-    font-style: italic;
-    height: 0px; /* hack to make hover area nothing */
-    display: inline-block;
-}
-
-.link-submit .submit-link {
-    width: 400px;
-    margin: 0 auto;
-}
-
-.input-status {
-    display: inline-block;
-    font-size: 24px;
 }

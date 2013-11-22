@@ -24,3 +24,11 @@ hr.large {
 .text-left {
     text-align: left;
 }
+
+.hidden {
+    display: none !important;
+}
+
+.processing {
+    opacity: 0.1;
+}
