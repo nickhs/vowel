@@ -32,7 +32,7 @@ def parse_article(article, share):
     else:
         app.logger.warning("Parse article did not return any url for %s (%s)" % (article, json))
 
-    article.icon = json['icon']
+    article.icon = json.get('icon')
     article.title = (json['title'][:252] + '...') if len(json['title']) > 255 else json['title']
     article.text = json['text']
     article.date = json['date']
